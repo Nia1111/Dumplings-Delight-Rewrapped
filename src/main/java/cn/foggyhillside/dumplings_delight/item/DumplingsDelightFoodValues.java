@@ -6,13 +6,13 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 import static vectorwing.farmersdelight.common.FoodValues.LONG_DURATION;
-import static vectorwing.farmersdelight.common.FoodValues.comfort;
+import static vectorwing.farmersdelight.common.FoodValues.nourishment;
 
 public class DumplingsDelightFoodValues {
     public static final FoodProperties PORK_CABBAGE_BOILED_DUMPLING = new FoodProperties.Builder().nutrition(8).saturationModifier(0.9F).build();
-    public static final FoodProperties PORK_CARROT_WONTON = new FoodProperties.Builder().nutrition(14).saturationModifier(0.5F).effect(() -> comfort(LONG_DURATION), 1.0F).build();
-    public static final FoodProperties PORK_MUSHROOM_WONTON = new FoodProperties.Builder().nutrition(12).saturationModifier(0.6F).effect(() -> comfort(LONG_DURATION), 1.0F).build();
-    public static final FoodProperties PORK_CABBAGE_WONTON = new FoodProperties.Builder().nutrition(11).saturationModifier(0.8F).effect(() -> comfort(LONG_DURATION), 1.0F).build();
+    public static final FoodProperties PORK_CARROT_WONTON = new FoodProperties.Builder().nutrition(14).saturationModifier(0.5F).effect(() -> nourishment(LONG_DURATION), 1.0F).build();
+    public static final FoodProperties PORK_MUSHROOM_WONTON = new FoodProperties.Builder().nutrition(12).saturationModifier(0.6F).effect(() -> nourishment(LONG_DURATION), 1.0F).build();
+    public static final FoodProperties PORK_CABBAGE_WONTON = new FoodProperties.Builder().nutrition(11).saturationModifier(0.8F).effect(() -> nourishment(LONG_DURATION), 1.0F).build();
     public static final FoodProperties FUNGUS_BOILED_DUMPLING = new FoodProperties.Builder().nutrition(6).saturationModifier(0.7F).build();
     public static final FoodProperties PORK_KELP_BOILED_DUMPLING = new FoodProperties.Builder().nutrition(7).saturationModifier(0.8F).build();
     public static final FoodProperties CALAMARI_BOILED_DUMPLING = new FoodProperties.Builder().nutrition(7).saturationModifier(0.8F).build();

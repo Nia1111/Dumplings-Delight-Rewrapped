@@ -42,7 +42,7 @@ public class EggplantBlock extends CropBlock
             int quantity = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(DumplingsDelightItems.EGGPLANT.get(), quantity));
 
-            level.playSound(null, pos, ModSounds.ITEM_TOMATO_PICK_FROM_BUSH.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound(null, pos, ModSounds.BLOCK_TOMATOES_PICK_TOMATOES.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(getAgeProperty(), 5), 2);
             return InteractionResult.SUCCESS;
         } else {

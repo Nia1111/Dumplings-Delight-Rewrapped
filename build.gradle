@@ -16,6 +16,18 @@ group = mod_group_id
 repositories {
     //maven { url "https://maven.ryanliptak.com/" } // AppleSkin
     maven { url "https://www.cursemaven.com" }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 base {
@@ -85,7 +97,7 @@ configurations {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation "curse.maven:farmers-delight-398521:${farmersdelight_version}"
+    implementation "maven.modrinth:farmers-delight:${farmersdelight_version}"
 
     // for testing
     //localRuntime "squeek.appleskin:appleskin-neoforge:mc1.21-3.0.5"
