@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
+import vectorwing.farmersdelight.common.item.PlaceableItem;
 
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
@@ -39,7 +40,7 @@ public class DumplingsDelightItems {
 
     //Feast
     public static final Supplier<Item> DUMPLING_MEDLEY = registerWithTab("dumpling_medley",
-            () -> new BlockItem(DumplingsDelightBlocks.DUMPLING_MEDLEY.get(), new Item.Properties().stacksTo(1)));
+            () -> new PlaceableItem(DumplingsDelightBlocks.DUMPLING_MEDLEY.get(), new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> VINEGAR = registerWithTab("vinegar",
             () -> new ConsumableItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(1), true));
     public static final Supplier<Item> CALAMARI = registerWithTab("calamari",

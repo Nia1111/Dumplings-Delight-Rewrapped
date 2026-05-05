@@ -38,5 +38,5 @@ public class DumplingsDelightBlocks {
     public static final Supplier<Block> FENNEL_CRATE = BLOCKS.register("fennel_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Block> DUMPLING_MEDLEY = BLOCKS.register("dumpling_medley",
-            () -> new DumplingMedleyBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL), true));
+            () -> new DumplingMedleyBlock(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS), true));
 }

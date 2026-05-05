@@ -28,22 +28,31 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Collection;
-
 public class DumplingMedleyBlock extends Block {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final IntegerProperty SERVINGS = IntegerProperty.create("servings", 0, 7);
     public final boolean hasLeftovers;
-    protected static final VoxelShape[] SHAPES = new VoxelShape[]{
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D),
-            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 3.0D, 15.0D)
+
+    protected static final VoxelShape[] SHAPE_EAST_WEST = new VoxelShape[]{
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D),
+            Block.box(1.0D, 0.0D, 2.0D, 15.0D, 3.0D, 14.0D)
+    };
+    protected static final VoxelShape[] SHAPE_NORTH_SOUTH = new VoxelShape[]{
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D),
+            Block.box(2.0D, 0.0D, 1.0D, 14.0D, 3.0D, 15.0D)
     };
 
     public DumplingMedleyBlock(Properties properties, boolean hasLeftovers) {
@@ -62,7 +71,9 @@ public class DumplingMedleyBlock extends Block {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[state.getValue(SERVINGS)];
+        if (state.getValue(FACING) == Direction.NORTH || state.getValue(FACING) == Direction.SOUTH)
+            return SHAPE_NORTH_SOUTH[state.getValue(SERVINGS)];
+        return SHAPE_EAST_WEST[state.getValue(SERVINGS)];
     }
 
     @Override
