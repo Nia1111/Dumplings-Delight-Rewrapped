@@ -50,6 +50,21 @@
               }
             }
           ],
+          "name": "dumplings_delight:celery_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
           "name": "dumplings_delight:chinese_cabbage_seeds"
         },
         {

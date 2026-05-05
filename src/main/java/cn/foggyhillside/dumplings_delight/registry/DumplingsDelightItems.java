@@ -27,6 +27,8 @@ public class DumplingsDelightItems {
     //Crate
     public static final Supplier<Item> CHINESE_CABBAGE_CRATE = registerWithTab("chinese_cabbage_crate",
             () -> new BlockItem(DumplingsDelightBlocks.CHINESE_CABBAGE_CRATE.get(), new Item.Properties()));
+    public static final Supplier<Item> CELERY_CRATE = registerWithTab("celery_crate",
+            () -> new BlockItem(DumplingsDelightBlocks.CELERY_CRATE.get(), new Item.Properties()));
     public static final Supplier<Item> GARLIC_CRATE = registerWithTab("garlic_crate",
             () -> new BlockItem(DumplingsDelightBlocks.GARLIC_CRATE.get(), new Item.Properties()));
     public static final Supplier<Item> GREENONION_CRATE = registerWithTab("greenonion_crate",
@@ -59,6 +61,10 @@ public class DumplingsDelightItems {
             () -> new ConsumableItem(new Item.Properties().food(DumplingsDelightFoodValues.GARLIC_CLOVE), true));
     public static final Supplier<Item> GREENONION = registerWithTab("greenonion",
             () -> new BlockItem(DumplingsDelightBlocks.GREENONION.get(), new Item.Properties().food(DumplingsDelightFoodValues.GREENONION)));
+    public static final Supplier<Item> CELERY = registerWithTab("celery",
+            () -> new Item(new Item.Properties().food(DumplingsDelightFoodValues.CELERY)));
+    public static final Supplier<Item> CELERY_SEEDS = registerWithTab("celery_seeds",
+            () -> new BlockItem(DumplingsDelightBlocks.CELERY.get(), new Item.Properties()));
     public static final Supplier<Item> EGGPLANT = registerWithTab("eggplant",
             () -> new Item(new Item.Properties().food(DumplingsDelightFoodValues.EGGPLANT)));
     public static final Supplier<Item> EGGPLANT_SEEDS = registerWithTab("eggplant_seeds",

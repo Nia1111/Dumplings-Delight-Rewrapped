@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dumplings_delight:celery"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "dumplings_delight:celery_crate"
+  }
+}

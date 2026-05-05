@@ -19,6 +19,8 @@ public class DumplingsDelightBlocks {
             () -> new GarlicBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> GREENONION = BLOCKS.register("greenonion",
             () -> new GreenOnionBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final Supplier<Block> CELERY = BLOCKS.register("celery",
+            () -> new CeleryBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> EGGPLANT = BLOCKS.register("eggplant",
             () -> new EggplantBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> GARLIC_CHIVE = BLOCKS.register("garlic_chive",
@@ -26,6 +28,8 @@ public class DumplingsDelightBlocks {
     public static final Supplier<Block> FENNEL = BLOCKS.register("fennel",
             () -> new FennelBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> CHINESE_CABBAGE_CRATE = BLOCKS.register("chinese_cabbage_crate",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> CELERY_CRATE = BLOCKS.register("celery_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Block> GARLIC_CRATE = BLOCKS.register("garlic_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));

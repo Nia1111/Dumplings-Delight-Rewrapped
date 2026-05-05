@@ -39,6 +39,12 @@
     "dumplings_delight:fennel_seeds": {
       "chance": 0.3
     },
+    "dumplings_delight:celery": {
+      "chance": 0.65
+    },
+    "dumplings_delight:celery_seeds": {
+      "chance": 0.3
+    },
     "dumplings_delight:fungus_boiled_dumpling": {
       "chance": 1.0
     },

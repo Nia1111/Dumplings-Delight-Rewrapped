@@ -20,6 +20,7 @@ public class CommonSetup
 				DumplingsDelightItems.CHINESE_CABBAGE.get(),
 				DumplingsDelightItems.GARLIC.get(),
 				DumplingsDelightItems.GREENONION.get(),
+				DumplingsDelightItems.CELERY_SEEDS.get(),
 				DumplingsDelightItems.EGGPLANT.get(),
 				DumplingsDelightItems.GARLIC_CHIVE.get(),
 				DumplingsDelightItems.FENNEL.get(),
