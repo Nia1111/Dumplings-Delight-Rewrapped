@@ -26,7 +26,7 @@ public class VillagerEvents
 {
 	@SubscribeEvent
 	public static void onVillagerTrades(VillagerTradesEvent event) {
-		if (!DumplingsDelightConfig.FARMERS_BUY_DUMPLINGS_DELIGHT_CROPS.get()) return;
+		if (!DumplingsDelightConfig.ENABLE_FARMERS_DUMPLINGS_DELIGHT_TRADES.get()) return;
 
 		Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 		VillagerProfession profession = event.getType();
@@ -36,6 +36,7 @@ public class VillagerEvents
 			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.GARLIC.get(), 26, 16, 2));
 			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.GREENONION.get(), 26, 16, 2));
 			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.EGGPLANT.get(), 26, 16, 2));
+			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.CELERY.get(), 20, 16, 2));
 			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.FENNEL.get(), 20, 16, 2));
 			trades.get(1).add(emeraldForItemsTrade(DumplingsDelightItems.GARLIC_CHIVE.get(), 20, 16, 2));
 			trades.get(2).add(emeraldForItemsTrade(DumplingsDelightItems.CHINESE_CABBAGE.get(), 16, 16, 5));
@@ -44,9 +45,10 @@ public class VillagerEvents
 
 	@SubscribeEvent
 	public static void onWandererTrades(WandererTradesEvent event) {
-		if (DumplingsDelightConfig.WANDERING_TRADER_SELLS_DUMPLINGS_DELIGHT_ITEMS.get()) {
+		if (DumplingsDelightConfig.ENABLE_WANDERING_TRADER_DUMPLINGS_DELIGHT_TRADES.get()) {
 			List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
 			trades.add(itemForEmeraldTrade(DumplingsDelightItems.CHINESE_CABBAGE_SEEDS.get(), 1, 12));
+			trades.add(itemForEmeraldTrade(DumplingsDelightItems.CELERY_SEEDS.get(), 1, 12));
 			trades.add(itemForEmeraldTrade(DumplingsDelightItems.EGGPLANT_SEEDS.get(), 1, 12));
 			trades.add(itemForEmeraldTrade(DumplingsDelightItems.FENNEL_SEEDS.get(), 1, 12));
 			trades.add(itemForEmeraldTrade(DumplingsDelightItems.GARLIC.get(), 1, 12));
