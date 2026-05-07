@@ -14,7 +14,7 @@ version = "${minecraft_version}-${mod_version}"
 group = mod_group_id
 
 repositories {
-    //maven { url "https://maven.ryanliptak.com/" } // AppleSkin
+//    maven { url "https://maven.ryanliptak.com/" } // AppleSkin
     maven { url "https://www.cursemaven.com" }
 }
 
@@ -88,10 +88,10 @@ dependencies {
     implementation "curse.maven:farmers-delight-398521:${farmersdelight_version}"
 
     // for testing
-    //localRuntime "squeek.appleskin:appleskin-neoforge:mc1.21-3.0.5"
-    //localRuntime "curse.maven:jei-238222:5778392"
-    //localRuntime "curse.maven:croptopia-415438:5571647"
-    //localRuntime "curse.maven:epherolib-885449:5549595" //croptopia dep (epherolib)
+//    localRuntime "squeek.appleskin:appleskin-neoforge:mc1.21-3.0.5"
+//    localRuntime "curse.maven:jei-238222:5778392"
+//    localRuntime "curse.maven:croptopia-415438:5571647"
+//    localRuntime "curse.maven:epherolib-885449:5549595" //croptopia dep (epherolib)
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
