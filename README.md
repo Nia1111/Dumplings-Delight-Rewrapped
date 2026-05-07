@@ -12,6 +12,8 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 <details>
 <summary>Changes to the original</summary>
 
+- added standalone celery crop (original needed another mod that added it)
+- slightly changed dumpling medley layout to be more compact
 - toned down wonton food value
 - rabbit meat dumpling now takes either rabbit meat or foot instead of both
 - chinese cabbage and garlic can be re-crafted from their leaves and cloves respectively
@@ -26,13 +28,5 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 - config for crops appearing as chest loot
 - some advancement adjustments
 - additional language support
-
-</details>
-
-<details>
-<summary>Known Issues</summary>
-
-- Pork Celery Dumpling recipe visible on JEI, but uncraftable
-    - The recipe needs celery from any mod that adds it, but the original Dumplings Delight didn't. A standalone celery crop for DD:R is planned.
 
 </details>
